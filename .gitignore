@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/MyFiscal/config/applicationhost.config
+/.vs
+/MyFiscal.Data/bin/Debug/netstandard2.0
+/MyFiscal.Data/obj
+/MyFiscal.Domain/bin/Debug/netstandard2.0
+/MyFiscal.Domain/obj/Debug/netstandard2.0
+/MyFiscal.Domain/obj
+/MyFiscal.Service/bin/Debug/netstandard2.0
+/MyFiscal.Service/obj
+/MyFiscal.Web/bin/Debug/netcoreapp3.1
+/MyFiscal.Web/obj
