@@ -1,7 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyFiscal.Data\MyFiscal.Data.csproj" />
+    <ProjectReference Include="..\MyFiscal.Domain\MyFiscal.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IssueService\" />
+    <Folder Include="TodoService\" />
+  </ItemGroup>
 
 </Project>

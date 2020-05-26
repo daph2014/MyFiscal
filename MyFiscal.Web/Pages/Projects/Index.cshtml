@@ -1,0 +1,67 @@
+﻿@page
+@model MyFiscal.Web.Pages.Projects.IndexModel
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<div class="container row p-0 m-0">
+    <div class="col-10">
+        <h2 class="text-info">Project List</h2>
+    </div>
+    <div class="col-2">
+        <a asp-page="Create" class="btn btn-info form-control text-white">Create Project</a>
+    </div>
+
+    <div class="col border p-3 mt-3">
+        <form method="post">
+            @if (Model.Projects.Any())
+            {
+                <table class="table table-striped border">
+                    <thead>
+                        <tr>
+                            <th class="table-secondary">
+                                <label asp-for="Projects.FirstOrDefault().Name"></label>
+                            </th>
+                            <th class="table-secondary">
+                                <label asp-for="Projects.FirstOrDefault().StartDate"></label>
+                            </th>
+                            <th class="table-secondary">
+                                <label asp-for="Projects.FirstOrDefault().PotentialRevenue"></label>
+                            </th>
+                            <th class="table-secondary">
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var p in Model.Projects)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(m => p.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => p.StartDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => p.PotentialRevenue)
+                                </td>
+                                <td>
+                                    <a asp-page="./Edit" asp-route-id="@p.Id">Edit</a>
+                                    <button asp-page-handler="Delete" asp-route-id="@p.Id" class="btn btn-sm btn-danger" onclick="return confirm('Sure?')">Delete</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>No Projects Available</p>
+            }
+        </form>
+    </div>
+
+
+</div>
+

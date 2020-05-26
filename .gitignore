@@ -13,3 +13,6 @@
 /MyFiscal.Service/obj
 /MyFiscal.Web/bin/Debug/netcoreapp3.1
 /MyFiscal.Web/obj
+/MyFiscal.Data/bin/Debug/netstandard2.1
+/MyFiscal.Domain/bin/Debug/netstandard2.1
+/MyFiscal.Service/bin/Debug/netstandard2.1
